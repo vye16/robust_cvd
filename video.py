@@ -12,9 +12,11 @@ from utils import (frame_sampling, image_io)
 from utils.helpers import mkdir_ifnotexists
 
 
-ffmpeg = "/usr/local/bin/ffmpeg"
-ffprobe = "/usr/local/bin/ffprobe"
+# ffmpeg = "/usr/local/bin/ffmpeg"
+# ffprobe = "/usr/local/bin/ffprobe"
 
+ffmpeg = "ffmpeg"
+ffprobe = "ffprobe"
 
 def sample_pairs(frame_range, flow_ops):
     #TODO: update the frame range with reconstruction range
