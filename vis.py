@@ -4,7 +4,7 @@ import sys
 from lib_python import DepthVideo, DepthVideoImporter
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
 
     import argparse
 
@@ -17,4 +17,6 @@ if __name__=="__main__":
     discoverStreams = True
     DepthVideoImporter.importVideo(video, args.results_dir, discoverStreams)
     video.printInfo()
-    import ipdb; ipdb.set_trace()
+    import ipdb
+
+    ipdb.set_trace()
