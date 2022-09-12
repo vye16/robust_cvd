@@ -628,6 +628,12 @@ class DepthFineTuner:
         if self.params.post_filter:
             pose_optimizer.filter_depth(self.params.filter_radius)
 
+        # save final intrinsics and extrinsics
+        print("Saving intrinsics and extrinsics")
+        np.savetxt(f"{self.out_dir}/intrinsics.txt", dataset.intrinsics)
+        N = len(dataset.extrinsics)
+        np.savetxt(f"{self.out_dir}/extrinsics.txt", dataset.extrinsics.reshape(N, -1))
+
         print("Finished Filtering.")
 
     def eval_and_save(
